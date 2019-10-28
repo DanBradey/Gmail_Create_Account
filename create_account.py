@@ -18,6 +18,8 @@ driver.get("https://accounts.google.com/SignUp")
 
 #get the first name textbox
 first_name = driver.find_element_by_id("FirstName")
+if first_name == None:
+    raise ValueError("First name TextBox not found")
 first_name.clear()
 
 #pull random first name from list
